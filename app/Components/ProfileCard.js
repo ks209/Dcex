@@ -39,7 +39,7 @@ export const ProfileCard=({publicKey})=>{
       <div className="max-w-xl bg-white rounded shadow w-full p-6 ">
         <Greeting image={session.data?.user?.image} name={session.data?.user?.name}/>
         <div className="pt-5 w-full flex">
-        {Tabs.map(tab=>{
+        {Tabs.map(key,tab=>{
           return <TabButton active={tab===selectedtab} onClick={()=>setSelectedTab(tab)}>{tab.toLocaleUpperCase()}</TabButton>
         })}
         </div>

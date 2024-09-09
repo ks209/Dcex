@@ -13,7 +13,7 @@ export const useTokens = (address) => {
             setTokensBalance(data);
             setLoading(false)
         })
-    },[])
+    })
 
   return (
     {loading, tokensBalance}

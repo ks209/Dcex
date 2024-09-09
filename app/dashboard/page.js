@@ -27,7 +27,7 @@ async function getUserWallet(){
   return userWallet.publickey;
 }
 
-export default async function(){
+export default async function page(){
   const userWallet = await getUserWallet();
   
   if(userWallet.error){
