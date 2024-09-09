@@ -39,8 +39,8 @@ export const ProfileCard=({publicKey})=>{
       <div className="max-w-xl bg-white rounded shadow w-full p-6 ">
         <Greeting image={session.data?.user?.image} name={session.data?.user?.name}/>
         <div className="pt-5 w-full flex">
-        {Tabs.map(key,tab=>{
-          return <TabButton active={tab===selectedtab} onClick={()=>setSelectedTab(tab)}>{tab.toLocaleUpperCase()}</TabButton>
+        {Tabs.map((tab,index)=>{
+          return <TabButton key={index} active={tab===selectedtab} onClick={()=>setSelectedTab(tab)}>{tab?.toLocaleUpperCase('en-US')}</TabButton>
         })}
         </div>
         <div className={` ${selectedtab==="tokens" ? "visible" : "hidden" } `}>

@@ -11,7 +11,8 @@ const Appbar = () => {
         </div>
         <div className='p-5 flex-col justify-center'>
             {session.data?.user ? <PrimaryButton onClick={()=>{
-                signOut()
+                signOut({ callbackUrl: '/' })
+
             }}>LogOut</PrimaryButton>:<PrimaryButton onClick={()=>{
                 signIn()
             }}>LogIn</PrimaryButton>}
